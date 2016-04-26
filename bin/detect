@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "Research 🔬"
+exit 0
