@@ -33,6 +33,8 @@ CACHE_DIR=$2
 ENV_DIR=$3
 
 topic "Environment variables"
+ls -hal $ENV_DIR | indent
+
 if [ -d "$ENV_DIR" ]; then
   for e in $(ls $ENV_DIR); do
     echo "       $e=$(cat $ENV_DIR/$e)"
