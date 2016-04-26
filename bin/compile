@@ -38,7 +38,6 @@ echo_env_vars() {
   if [ -d "$env_dir" ]; then
     for e in $(ls $env_dir); do
       echo "$e=$(cat $env_dir/$e)"
-      :
     done
   fi
 }
