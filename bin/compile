@@ -32,18 +32,12 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
-
-echo_env_vars() {
-  local env_dir=$1
-  if [ -d "$env_dir" ]; then
-    for e in $(ls $env_dir); do
-      echo "$e=$(cat $env_dir/$e)"
-    done
-  fi
-}
-
 topic "Environment variables"
-echo_env_vars "$ENV_DIR" | indent
+if [ -d "$ENV_DIR" ]; then
+  for e in $(ls $ENV_DIR); do
+    echo "       $e=$(cat $ENV_DIR/$e)"
+  done
+fi
 
 topic "Cancelling build"
 exit 1
