@@ -42,5 +42,6 @@ if [ -d "$ENV_DIR" ]; then
   done
 fi
 
-topic "Cancelling build"
-exit 1
+topic "Release-phase setup"
+mkdir -p $BUILD_DIR/bin
+cp bin/echo_env $BUILD_DIR/bin/echo_env
