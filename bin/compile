@@ -45,3 +45,7 @@ fi
 topic "Release-phase setup"
 mkdir -p $BUILD_DIR/bin
 cp bin/echo_env $BUILD_DIR/bin/echo_env
+
+topic ".profile.d/ setup"
+mkdir -p $BUILD_DIR/.profile.d
+cp .profile.d/* $BUILD_DIR/.profile.d/
